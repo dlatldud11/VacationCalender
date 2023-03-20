@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import App from './App';
 
 function Test() {
   return (
@@ -7,7 +8,7 @@ function Test() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Editssdfsdfdfsdfsd <code>src/App.js</code> and save to reload.
+          test <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -17,6 +18,8 @@ function Test() {
         >
           Learn React
         </a>
+        <App/>
+        
       </header>
     </div>
   );
