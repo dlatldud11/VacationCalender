@@ -99,12 +99,12 @@
 		                <goal>install-node-and-npm</goal>
 		            </goals>
 		            <configuration>
-		                <nodeVersion>v19.7.0</nodeVersion>
-		                <npmVersion>9.5.0</npmVersion>
+		                <nodeVersion>v19.7.0</nodeVersion> <!--설치할 node의 버전-->
+		                <npmVersion>9.5.0</npmVersion> <!--설치할 npm의 버전-->
 		            </configuration>
 		        </execution>
 		        <execution>
-		            <id>npm install</id>
+		            <id>npm install</id> <!--npm install 로 package.json의 모듈을 설치한다.-->
 		            <goals>
 		                <goal>npm</goal>
 		            </goals>
@@ -113,13 +113,31 @@
 		            </configuration>
 		        </execution>
 		        <execution>
-		            <id>npm run build</id>
+		            <id>npm run build</id> <!--react.js 빌드-->
 		            <goals>
 		                <goal>npm</goal>
 		            </goals>
 		            <configuration>
 		                <arguments>run build</arguments>
 		            </configuration>
+		        </execution>
+		    </executions>
+		</plugin>
+		<plugin>
+		    <artifactId>maven-antrun-plugin</artifactId>
+		    <executions>
+		        <execution>
+		            <phase>generate-resources</phase>
+		            <configuration>
+		                <target>
+		                    <copy todir="${project.build.directory}/classes/static"> <!--붙여넣기할 디렉토리 설정-->
+		                        <fileset dir="${project.basedir}/src/main/bestvaction-app/build"/> <!--가져올 디렉토리-->
+		                    </copy>
+		                </target>
+		            </configuration>
+		            <goals>
+		                <goal>run</goal>
+		            </goals>
 		        </execution>
 		    </executions>
 		</plugin>
