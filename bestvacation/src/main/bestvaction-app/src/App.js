@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
    const [hello, setHello] = useState('')
@@ -13,6 +14,7 @@ function App() {
     return (
         <div>
             백엔드에서 가져온 데이터입니다 : {hello}
+            <button class="btn btn-default" type="submit">Button</button>
         </div>
     );
 }
