@@ -9,7 +9,6 @@ public class BestvacationApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BestvacationApplication.class, args);
 		System.out.println("mainpage");
-		System.out.println("test용 ");
 	}
 
 }
