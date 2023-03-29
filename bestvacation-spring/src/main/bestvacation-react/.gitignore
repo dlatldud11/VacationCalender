@@ -1,0 +1,45 @@
+# 아래부터는 react gitignore
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 검색해서 임시로 넣어본 gitignore
+# Created by https://www.toptal.com/developers/gitignore/api/windows,eclipse,java,react
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,eclipse,java,react
+
+### react ###
+.DS_*
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+# End of https://www.toptal.com/developers/gitignore/api/windows,eclipse,java,react
